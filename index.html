@@ -12,18 +12,27 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh; /* dynamic viewport height: fills what's actually visible on phones */
     background: #000; overflow: hidden;
   }
   #bg {
-    position: fixed; inset: 0;
-    width: 100%; height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* fill the visible screen, adjusting for the phone toolbar */
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
   }
   .overlay {
-    position: fixed; inset: 0;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     z-index: 1;
     display: flex;
     align-items: center;
